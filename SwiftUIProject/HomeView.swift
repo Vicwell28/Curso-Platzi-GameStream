@@ -1,20 +1,20 @@
 //
-//  SwiftUIViewExample.swift
+//  HomeView.swift
 //  SwiftUIProject
 //
-//  Created by soliduSystem on 09/04/23.
+//  Created by soliduSystem on 10/04/23.
 //
 
 import SwiftUI
 
-struct SwiftUIViewExample: View {
+struct HomeView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct SwiftUIViewExample_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIViewExample()
+        HomeView()
     }
 }

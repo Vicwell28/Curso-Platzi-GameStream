@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C128677129E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128677029E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift */; };
+		C128677329E3CAE40016A84B /* InicioSesionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128677229E3CAE40016A84B /* InicioSesionView.swift */; };
+		C128677529E3CB170016A84B /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128677429E3CB170016A84B /* RegistroView.swift */; };
+		C128677829E3D2400016A84B /* InicioYRegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128677729E3D2400016A84B /* InicioYRegistroView.swift */; };
+		C128677B29E3EAD00016A84B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128677A29E3EAD00016A84B /* HomeView.swift */; };
 		C1335AB629AFDFC70087E471 /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1335AB529AFDFC70087E471 /* SwiftUIProjectApp.swift */; };
 		C1335AB829AFDFC70087E471 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1335AB729AFDFC70087E471 /* ContentView.swift */; };
 		C1335ABA29AFDFC90087E471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1335AB929AFDFC90087E471 /* Assets.xcassets */; };
-		C1335ABD29AFDFC90087E471 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1335ABC29AFDFC90087E471 /* Preview Assets.xcassets */; };
-		C19DB68329E334B300933390 /* SwiftUIViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19DB68229E334B300933390 /* SwiftUIViewExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C128677029E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyButtonGray+SwiftUIView.swift"; sourceTree = "<group>"; };
+		C128677229E3CAE40016A84B /* InicioSesionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioSesionView.swift; sourceTree = "<group>"; };
+		C128677429E3CB170016A84B /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
+		C128677729E3D2400016A84B /* InicioYRegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioYRegistroView.swift; sourceTree = "<group>"; };
+		C128677A29E3EAD00016A84B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C1335AB229AFDFC70087E471 /* SwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1335AB529AFDFC70087E471 /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		C1335AB729AFDFC70087E471 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1335AB929AFDFC90087E471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1335ABC29AFDFC90087E471 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C19DB68229E334B300933390 /* SwiftUIViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C128677929E3D2C50016A84B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C1335AB929AFDFC90087E471 /* Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		C1335AA929AFDFC70087E471 = {
 			isa = PBXGroup;
 			children = (
@@ -53,21 +67,16 @@
 		C1335AB429AFDFC70087E471 /* SwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				C128677929E3D2C50016A84B /* Preview Content */,
 				C1335AB529AFDFC70087E471 /* SwiftUIProjectApp.swift */,
 				C1335AB729AFDFC70087E471 /* ContentView.swift */,
-				C1335AB929AFDFC90087E471 /* Assets.xcassets */,
-				C1335ABB29AFDFC90087E471 /* Preview Content */,
-				C19DB68229E334B300933390 /* SwiftUIViewExample.swift */,
+				C128677029E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift */,
+				C128677729E3D2400016A84B /* InicioYRegistroView.swift */,
+				C128677229E3CAE40016A84B /* InicioSesionView.swift */,
+				C128677429E3CB170016A84B /* RegistroView.swift */,
+				C128677A29E3EAD00016A84B /* HomeView.swift */,
 			);
 			path = SwiftUIProject;
-			sourceTree = "<group>";
-		};
-		C1335ABB29AFDFC90087E471 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				C1335ABC29AFDFC90087E471 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +137,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1335ABD29AFDFC90087E471 /* Preview Assets.xcassets in Resources */,
 				C1335ABA29AFDFC90087E471 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,9 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19DB68329E334B300933390 /* SwiftUIViewExample.swift in Sources */,
+				C128677329E3CAE40016A84B /* InicioSesionView.swift in Sources */,
+				C128677B29E3EAD00016A84B /* HomeView.swift in Sources */,
 				C1335AB829AFDFC70087E471 /* ContentView.swift in Sources */,
+				C128677529E3CB170016A84B /* RegistroView.swift in Sources */,
 				C1335AB629AFDFC70087E471 /* SwiftUIProjectApp.swift in Sources */,
+				C128677829E3D2400016A84B /* InicioYRegistroView.swift in Sources */,
+				C128677129E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
