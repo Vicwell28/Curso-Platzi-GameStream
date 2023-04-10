@@ -15,6 +15,10 @@
 		C1335AB629AFDFC70087E471 /* SwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1335AB529AFDFC70087E471 /* SwiftUIProjectApp.swift */; };
 		C1335AB829AFDFC70087E471 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1335AB729AFDFC70087E471 /* ContentView.swift */; };
 		C1335ABA29AFDFC90087E471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1335AB929AFDFC90087E471 /* Assets.xcassets */; };
+		C18EC31C29E466A900D02CED /* Perfil+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC31B29E466A900D02CED /* Perfil+View.swift */; };
+		C18EC31E29E466BA00D02CED /* Juegos+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC31D29E466BA00D02CED /* Juegos+View.swift */; };
+		C18EC32029E466CB00D02CED /* Inicio+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC31F29E466CB00D02CED /* Inicio+View.swift */; };
+		C18EC32329E466E100D02CED /* Favoritos+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC32229E466E100D02CED /* Favoritos+View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		C1335AB529AFDFC70087E471 /* SwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		C1335AB729AFDFC70087E471 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1335AB929AFDFC90087E471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C18EC31B29E466A900D02CED /* Perfil+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Perfil+View.swift"; sourceTree = "<group>"; };
+		C18EC31D29E466BA00D02CED /* Juegos+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Juegos+View.swift"; sourceTree = "<group>"; };
+		C18EC31F29E466CB00D02CED /* Inicio+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inicio+View.swift"; sourceTree = "<group>"; };
+		C18EC32229E466E100D02CED /* Favoritos+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favoritos+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +82,21 @@
 				C128677729E3D2400016A84B /* InicioYRegistroView.swift */,
 				C128677229E3CAE40016A84B /* InicioSesionView.swift */,
 				C128677429E3CB170016A84B /* RegistroView.swift */,
-				C128677A29E3EAD00016A84B /* HomeView.swift */,
+				C18EC31A29E4668800D02CED /* TapView */,
 			);
 			path = SwiftUIProject;
+			sourceTree = "<group>";
+		};
+		C18EC31A29E4668800D02CED /* TapView */ = {
+			isa = PBXGroup;
+			children = (
+				C128677A29E3EAD00016A84B /* HomeView.swift */,
+				C18EC31B29E466A900D02CED /* Perfil+View.swift */,
+				C18EC31D29E466BA00D02CED /* Juegos+View.swift */,
+				C18EC31F29E466CB00D02CED /* Inicio+View.swift */,
+				C18EC32229E466E100D02CED /* Favoritos+View.swift */,
+			);
+			path = TapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +169,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C128677329E3CAE40016A84B /* InicioSesionView.swift in Sources */,
+				C18EC32329E466E100D02CED /* Favoritos+View.swift in Sources */,
 				C128677B29E3EAD00016A84B /* HomeView.swift in Sources */,
 				C1335AB829AFDFC70087E471 /* ContentView.swift in Sources */,
+				C18EC31E29E466BA00D02CED /* Juegos+View.swift in Sources */,
 				C128677529E3CB170016A84B /* RegistroView.swift in Sources */,
+				C18EC32029E466CB00D02CED /* Inicio+View.swift in Sources */,
+				C18EC31C29E466A900D02CED /* Perfil+View.swift in Sources */,
 				C1335AB629AFDFC70087E471 /* SwiftUIProjectApp.swift in Sources */,
 				C128677829E3D2400016A84B /* InicioYRegistroView.swift in Sources */,
 				C128677129E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift in Sources */,

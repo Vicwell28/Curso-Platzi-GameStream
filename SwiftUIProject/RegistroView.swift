@@ -171,7 +171,7 @@ struct RegistroView: View {
                 
                 ZStack(alignment: .leading) {
                     if UserContra.isEmpty {
-                        Text(verbatim: "*******")
+                        Text(verbatim: "***********")
                             .foregroundColor(.white)
                             .fontWeight(Font.Weight.light)
                             .tracking(1)
