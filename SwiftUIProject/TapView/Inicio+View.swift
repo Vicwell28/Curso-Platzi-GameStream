@@ -7,9 +7,11 @@
 
 import SwiftUI
 import AVKit
+import Kingfisher
 
 struct Inicio_View: View {
     
+    var ApiViewModel = ViewModel()
     
     var body: some View {
         ZStack {
@@ -17,7 +19,6 @@ struct Inicio_View: View {
                 .ignoresSafeArea()
             
             VStack {
-                
                 Logo()
                     .padding(.horizontal, 10)
                 
@@ -28,21 +29,29 @@ struct Inicio_View: View {
                     SubModuloHome()
                         .padding(.top, 10)
                         .frame(maxWidth: .infinity)
-                    
                 }
                 .padding(.horizontal, 10)
                 .frame(maxWidth: .infinity)
-                
             }
             .frame(maxWidth: .infinity)
-            
         }
         .foregroundColor(Color.white)
-        
         
     }
 }
 
+
+struct CategoriesWithImages: Identifiable{
+    let id = UUID()
+    let name: String
+    let image: String
+}
+
+struct CategoryCardVideoViewData: Identifiable{
+    let id = UUID()
+    let name: String
+    let video: String
+}
 
 
 
@@ -70,6 +79,37 @@ struct SubModuloHome:View {
         "13-swiftuiapps-2105-farcry4",
     ]
     
+    let dataSourcesCategories: [CategoriesWithImages] = [
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+        CategoriesWithImages(name: "rpg-icon", image: "rpg-text"),
+        CategoriesWithImages(name: "open-world-icon", image: "open-world-text"),
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+        CategoriesWithImages(name: "rpg-icon", image: "rpg-text"),
+        CategoriesWithImages(name: "open-world-icon", image: "open-world-text"),
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+        CategoriesWithImages(name: "rpg-icon", image: "rpg-text"),
+        CategoriesWithImages(name: "open-world-icon", image: "open-world-text"),
+        CategoriesWithImages(name: "Vector-shot", image: "fps"),
+    ]
+    
+    let dataSourcesCategoryVideo: [CategoryCardVideoViewData] = [
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-battkefield", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-destiny_complete", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256671638/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-lastofus", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256720061/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-spiderman", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256814567/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-titanfall2", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-uncharted4", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-farcry4", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256705156/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-battkefield", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-destiny_complete", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-lastofus", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-spiderman", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-titanfall2", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-uncharted4", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256757119/movie480.mp4"),
+        CategoryCardVideoViewData(name: "13-swiftuiapps-2105-farcry4", video: "https://cdn.cloudflare.steamstatic.com/steam/apps/256658589/movie480.mp4"),
+    ]
     
     var body: some View {
         
@@ -119,16 +159,12 @@ struct SubModuloHome:View {
         
         ScrollView(.horizontal, showsIndicators: false) {
             
-            HStack(spacing: 20.0) {
-                CategoryCardView(firstImage: "Vector-shot", secondImage: "fps")
-                CategoryCardView(firstImage: "rpg-icon", secondImage: "rpg-text")
-                CategoryCardView(firstImage: "Vector-shot", secondImage: "fps")
-                CategoryCardView(firstImage: "open-world-icon", secondImage: "open-world-text")
-                CategoryCardView(firstImage: "Vector-shot", secondImage: "fps")
-                CategoryCardView(firstImage: "rpg-icon", secondImage: "rpg-text")
-                CategoryCardView(firstImage: "Vector-shot", secondImage: "fps")
-                CategoryCardView(firstImage: "open-world-icon", secondImage: "open-world-text")
+            LazyHGrid(rows: [GridItem(.flexible())]) {
+                ForEach(self.dataSourcesCategories.shuffled(), id: \.id) { category in
+                    CategoryCardView(firstImage: category.name, secondImage: category.image)
+                }
             }
+            
         }.padding(.top, -10)
         
         
@@ -141,20 +177,12 @@ struct SubModuloHome:View {
             .padding(.top, 30)
         
         ScrollView(.horizontal, showsIndicators: false) {
-            
-            HStack(spacing: 20.0) {
-                               
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-battkefield", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[0])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-destiny_complete", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[1])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-lastofus", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[2])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-spiderman", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[3])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-titanfall2", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[4])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-uncharted4", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[5])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-farcry4", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[6])!))
-
+            LazyHGrid(rows: [GridItem(.flexible())]) {
+                ForEach(self.dataSourcesCategoryVideo.shuffled(), id: \.id) { category in
+                    CategoryCardVideoView(image: category.name, videoPlayer: AVPlayer(url: URL(string: category.video)!))
+                }
             }
         }.padding(.top, -10)
-        
         
         
         
@@ -165,23 +193,14 @@ struct SubModuloHome:View {
             .padding(.top, 30)
         
         ScrollView(.horizontal, showsIndicators: false) {
-            
-            HStack(spacing: 20.0) {
-                
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-farcry4", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[6])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-lastofus", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[2])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-spiderman", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[3])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-titanfall2", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[4])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-battkefield", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[0])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-destiny_complete", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[1])!))
-                CategoryCardVideoView(image: "13-swiftuiapps-2105-uncharted4", videoPlayer: AVPlayer(url: URL(string: self.urlVideos[5])!))
-               
+            LazyHGrid(rows: [GridItem(.flexible())]) {
+                ForEach(self.dataSourcesCategoryVideo.shuffled(), id: \.id) { category in
+                    CategoryCardVideoView(image: category.name, videoPlayer: AVPlayer(url: URL(string: category.video)!))
+                }
             }
-        }.padding(.top, -10)
-            .padding(.bottom, 50)
-        
-        
-        
+        }
+        .padding(.top, -10)
+        .padding(.bottom, 50)
         
     }
 }
@@ -233,17 +252,16 @@ struct CategoryCardVideoView: View {
                 .cornerRadius(20)
                 .scaledToFill()
                 .frame(width: 227, height: 128)
+                .padding(.trailing, 20)
         }
         
     }
 }
 
-
 struct Logo : View {
     var body: some View {
         HStack {
             Image(systemName: "gamecontroller")
-            
             Text("Logo")
                 .fontWeight(.bold)
                 .font(.system(size: 30.0))
@@ -258,21 +276,41 @@ struct Logo : View {
 
 
 struct SearchBarView: View {
-    
     @State var textSeacrhBar : String = ""
-    
+    @State var isThereError: Bool = false
+    @State var msjAlerta: String = ""
+    @State var isPresentView: Bool = false
+    @State var juego: Game?
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
+            Image(systemName: "magnifyingglass").onTapGesture {
+                print("Algo")
+            }
             
             TextField(text: self.$textSeacrhBar) {
                 Text("Buscar un video...")
                     .foregroundColor(Color.white)
+            }.onSubmit {
+                ViewModel.requestData(videoGame: self.textSeacrhBar) { isSucces, data, error in
+                    if error != nil {
+                        self.msjAlerta = error!.localizedDescription
+                        self.isThereError.toggle()
+                        return
+                    }
+                    
+                    self.juego = try! JSONDecoder().decode(Game.self, from: data!)
+                    self.isPresentView = true
+                }
             }
             .foregroundColor(Color.white)
             .autocorrectionDisabled(false)
-            
         }
+        .navigationDestination(isPresented: self.$isPresentView, destination: {
+            JuegoDetalle_ViewEx(currentGame: self.juego)
+        })
+        .alert(self.msjAlerta, isPresented: self.$isThereError, actions: {
+            Button("oK", role: .cancel) { }
+        })
         .frame(maxWidth: .infinity)
         .padding(.all, 8)
         .background(Color.white.opacity(0.2))
@@ -280,11 +318,3 @@ struct SearchBarView: View {
     }
 }
 
-
-//
-//
-//struct p_inicio: PreviewProvider {
-//    static var previews: some View {
-//        Inicio_View()
-//    }
-//}

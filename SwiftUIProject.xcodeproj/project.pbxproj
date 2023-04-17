@@ -23,6 +23,8 @@
 		C18EC31E29E466BA00D02CED /* Juegos+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC31D29E466BA00D02CED /* Juegos+View.swift */; };
 		C18EC32029E466CB00D02CED /* Inicio+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC31F29E466CB00D02CED /* Inicio+View.swift */; };
 		C18EC32329E466E100D02CED /* Favoritos+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EC32229E466E100D02CED /* Favoritos+View.swift */; };
+		C1A2C00829ECFB1D00573A13 /* JuegoDetalle_ViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2C00729ECFB1D00573A13 /* JuegoDetalle_ViewEx.swift */; };
+		C1B481DF29EBB85F00E06BCE /* JuegoDetalle+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B481DE29EBB85F00E06BCE /* JuegoDetalle+View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		C18EC31D29E466BA00D02CED /* Juegos+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Juegos+View.swift"; sourceTree = "<group>"; };
 		C18EC31F29E466CB00D02CED /* Inicio+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Inicio+View.swift"; sourceTree = "<group>"; };
 		C18EC32229E466E100D02CED /* Favoritos+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favoritos+View.swift"; sourceTree = "<group>"; };
+		C1A2C00729ECFB1D00573A13 /* JuegoDetalle_ViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoDetalle_ViewEx.swift; sourceTree = "<group>"; };
+		C1B481DE29EBB85F00E06BCE /* JuegoDetalle+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JuegoDetalle+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				C18EC31F29E466CB00D02CED /* Inicio+View.swift */,
 				C18EC32229E466E100D02CED /* Favoritos+View.swift */,
 				C152918B29E498BF007ADB84 /* PlayVideoView.swift */,
+				C1B481DE29EBB85F00E06BCE /* JuegoDetalle+View.swift */,
+				C1A2C00729ECFB1D00573A13 /* JuegoDetalle_ViewEx.swift */,
 			);
 			path = TapView;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A2C00829ECFB1D00573A13 /* JuegoDetalle_ViewEx.swift in Sources */,
 				C128677329E3CAE40016A84B /* InicioSesionView.swift in Sources */,
 				C18EC32329E466E100D02CED /* Favoritos+View.swift in Sources */,
 				C152918C29E498BF007ADB84 /* PlayVideoView.swift in Sources */,
@@ -223,6 +230,7 @@
 				C128677829E3D2400016A84B /* InicioYRegistroView.swift in Sources */,
 				C18DDBC429E4EAEB00A113A0 /* GameModel.swift in Sources */,
 				C128677129E3C94C0016A84B /* MyButtonGray+SwiftUIView.swift in Sources */,
+				C1B481DF29EBB85F00E06BCE /* JuegoDetalle+View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,3 +18,8 @@ struct Perfil_View: View {
     }
 }
 
+struct previewProfile: PreviewProvider {
+    static var previews: some View {
+        Perfil_View()
+    }
+}

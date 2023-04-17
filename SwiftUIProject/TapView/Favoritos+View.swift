@@ -18,3 +18,4 @@ struct Favoritos_View: View {
     }
 }
 
+
